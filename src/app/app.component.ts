@@ -4,7 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  //Or using inline style
+  // styles: [`
+  //   h3 {
+  //     color: blue;
+  //   }
+  // `]
 })
 export class AppComponent {
-  
+
 }
