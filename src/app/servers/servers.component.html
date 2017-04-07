@@ -17,5 +17,15 @@
 
 <hr>
 
+<label>User Name</label>
+
+<input type="text" class="form-control" [(ngModel)]="userName">
+
+<p>{{ userName }}</p>
+
+<button class="btn btn-primary"
+[disabled]="userName === ''"
+(click)="userName = ''">Reset User</button>
+
 <app-server></app-server>
 <app-server></app-server>
