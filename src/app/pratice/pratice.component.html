@@ -1,0 +1,12 @@
+<!-- <button class="btn btn-primary"
+(click)="showContent = !showContent">Display Details</button> -->
+
+<button class="btn btn-primary"
+(click)="onDisplayContent()">Display Details</button>
+
+<p *ngIf="showContent" >Each element in the DHTML Object Model supports an outgoing HTMLElementEvents2 interface. This interface defines the events that an HTML element can fire. You implement this interface to provide an event sink, which is a Component Object Model (COM) object that implements an outgoing interface and is used as the mechanism for firing events.</p>
+<div *ngFor="let logItems of log; let i = index"
+     [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+     [ngClass]="{'white-text': i >= 4}">
+   {{ logItems }}
+ </div>

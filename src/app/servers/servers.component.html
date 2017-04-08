@@ -13,7 +13,12 @@
 <!-- <p>{{ allowNewServer }}</p>              String Interpolation -->
 <!--<p [innerText] = "allowNewServer"></p>    Property Binding -->
 <!-- <p>{{ serverName }}</p> -->
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated; else noServer">Server was created! Name is {{ serverName }}</p>
+<!-- * indicates that structure directive DOM will be changed -->
+<ng-template #noServer>
+  <p>No Server was created.</p>
+</ng-template>
 
 <hr>
 
@@ -27,5 +32,4 @@
 [disabled]="userName === ''"
 (click)="userName = ''">Reset User</button>
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
